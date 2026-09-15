@@ -1,5 +1,5 @@
+import { fetchWeather, WeatherResponse } from "@/lib/api/weather";
 import { useQuery } from "@tanstack/react-query";
-import { fetchWeather, WeatherResponse } from "../lib/api/weather";
 
 export function useWeather(lat?: number, lon?: number) {
   return useQuery<WeatherResponse, Error>({

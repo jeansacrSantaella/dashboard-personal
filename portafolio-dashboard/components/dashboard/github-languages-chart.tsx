@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { GitHubRepo } from "@/lib/api/github";
 import { useMemo } from "react";
 import {
   Cell,
@@ -16,7 +17,6 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
-import { GitHubRepo } from "../../lib/api/github";
 
 interface Props {
   repos?: GitHubRepo[];

@@ -1,5 +1,5 @@
+import { CryptoPricesResponse, fetchCryptoPrices } from "@/lib/api/crypto";
 import { useQuery } from "@tanstack/react-query";
-import { CryptoPricesResponse, fetchCryptoPrices } from "../lib/api/crypto";
 
 export const CRYPTO_PRICES_QUERY_KEY = ["cryptoPrices"] as const;
 

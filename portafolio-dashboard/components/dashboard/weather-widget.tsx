@@ -7,9 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useGeolocation } from "@/hooks/useGeolocation";
+import { useWeather } from "@/hooks/useWeather";
 import { ArrowDown, ArrowUp, CloudSun } from "lucide-react";
-import { useGeolocation } from "../../hooks/useGeolocation";
-import { useWeather } from "../../hooks/useWeather";
 
 export function WeatherWidget() {
   const { coords, loadingGeo } = useGeolocation();
