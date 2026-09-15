@@ -1,0 +1,11 @@
+dist/** linguist-vendored
+build/** linguist-vendored
+.next/** linguist-vendored
+node_modules/** linguist-vendored
+venv/** linguist-vendored
+*.json linguist-documentation
+*.svg linguist-documentation
+
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+*.py linguist-language=Python

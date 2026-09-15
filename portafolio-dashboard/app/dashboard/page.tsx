@@ -28,6 +28,7 @@ import { useState } from "react";
 import { CryptoLineChart } from "../components/dashboard/cryptoCard";
 import { GitHubLanguagesChart } from "../components/dashboard/github-languages-chart";
 import { GitHubRepoList } from "../components/dashboard/github-repo-list";
+import { GitHubStats } from "../components/dashboard/github-stats";
 import { WeatherWidget } from "../components/dashboard/weather-widget";
 import { useGitHubRepos } from "../hooks/useGitHubRepos";
 
@@ -99,18 +100,7 @@ export default function Dashboard() {
       </Sidebar>
 
       <main className="flex-1 p-6 space-y-6">
-        <SidebarTrigger />
-
-        <div>
-          <h1 className="text-2xl font-bold">Panel Principal</h1>
-          <p className="text-muted-foreground">Bienvenido a la plataforma.</p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          <CryptoLineChart />
-          <WeatherWidget />
-        </div>
-
+        {/* Sección Portafolio */}
         <div className="space-y-4">
           <div>
             <h2 className="text-xl font-bold tracking-tight">
@@ -121,19 +111,25 @@ export default function Dashboard() {
               <b>{username}</b>
             </p>
           </div>
-
+          {/* Grilla combinada de Métricas y Visualización */}
           <div className="grid gap-6 md:grid-cols-3">
-            {/* Donut Chart: Reactivo a los repositorios actuales */}
+            {/* Columna Izquierda (1/3): Donut Chart */}
             <div className="md:col-span-1">
               <GitHubLanguagesChart
                 repos={repos}
                 isLoading={isLoading}
                 currentUsername={username}
               />
+              <div className="mt-6">
+                <GitHubStats repos={repos} isLoading={isLoading} />
+              </div>
             </div>
 
-            {/* Lista con Input: Modifica el username compartido */}
-            <div className="md:col-span-2">
+            {/* Columna Derecha (2/3): Stat-Cards + Listado de Repositorios */}
+            <div className="md:col-span-2 space-y-6">
+              {/* Las 4 Mini-Cards llenan el espacio superior */}
+
+              {/* Listado de tarjetas de repositorios */}
               <GitHubRepoList
                 repos={repos}
                 isLoading={isLoading}
@@ -144,6 +140,17 @@ export default function Dashboard() {
                 onSearch={(newUsername) => setUsername(newUsername)}
               />
             </div>
+          </div>
+          <SidebarTrigger />
+
+          <div>
+            <h1 className="text-2xl font-bold">Panel Principal</h1>
+            <p className="text-muted-foreground">Bienvenido a la plataforma.</p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <CryptoLineChart />
+            <WeatherWidget />
           </div>
         </div>
       </main>
