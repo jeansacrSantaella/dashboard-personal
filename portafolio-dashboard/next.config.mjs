@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export", // 👈 Genera la carpeta 'out' con HTML/JS puros
+  basePath: process.env.NODE_ENV === "production" ? "/jeansacrSantaella" : "",
+  images: { unoptimized: true }, // Requerido si usas next/image en export estático
   env: {
     NEXT_PUBLIC_BUILD_TIME: new Date().toISOString(),
     NEXT_PUBLIC_APP_VERSION: "2.4.0",
