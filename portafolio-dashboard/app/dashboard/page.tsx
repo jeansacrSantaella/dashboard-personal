@@ -1,10 +1,9 @@
 "use client";
 
-import { CryptoLineChart } from "@/components/dashboard/cryptoCard";
 import { GitHubLanguagesChart } from "@/components/dashboard/github-languages-chart";
 import { GitHubRepoList } from "@/components/dashboard/github-repo-list";
 import { GitHubStats } from "@/components/dashboard/github-stats";
-import { WeatherWidget } from "@/components/dashboard/weather-widget";
+import { HeroSection } from "@/components/dashboard/HeroSection";
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
 import { useState } from "react";
 
@@ -33,6 +32,8 @@ export default function DashboardPage() {
           </p>
         </div>
 
+        <HeroSection />
+
         <div className="grid gap-6 md:grid-cols-3">
           <div className="md:col-span-1">
             <GitHubLanguagesChart
@@ -58,15 +59,10 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div>
-          <h1 className="text-2xl font-bold">Panel Principal</h1>
-          <p className="text-muted-foreground">Bienvenido a la plataforma.</p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2">
+        {/* <div className="grid gap-6 md:grid-cols-2">
           <CryptoLineChart />
           <WeatherWidget />
-        </div>
+        </div> */}
       </div>
     </div>
   );

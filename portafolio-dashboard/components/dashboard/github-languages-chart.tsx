@@ -116,7 +116,7 @@ export function GitHubLanguagesChart({
     <Card className="w-full">
       <CardHeader className="pb-0">
         <CardTitle className="text-base font-semibold">
-          Stack Tecnológico Real
+          Stack Tecnológico Público Actual
         </CardTitle>
         <CardDescription>
           Porcentaje de repositorios públicos según lenguaje principal de{" "}

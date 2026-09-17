@@ -62,6 +62,12 @@ export const INSTALLED_DEPENDENCIES: DependencyItem[] = [
     category: "UI & Styling",
     description: "Gestión y persistencia de temas oscuro/claro.",
   },
+  {
+    name: "xyflow",
+    version: "^12.11.6",
+    category: "Visualization",
+    description: "Motor gráfico de alto rendimiento sobre HTML5 Canvas.",
+  },
 ];
 
 export const CONNECTED_SERVICES: ServiceEndpoint[] = [

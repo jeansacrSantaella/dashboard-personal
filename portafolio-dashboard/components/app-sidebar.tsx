@@ -16,6 +16,7 @@ import {
   BrickWallShield,
   FolderKanban,
   Home,
+  Layers,
   Library,
   LogOut,
   Settings,
@@ -26,6 +27,11 @@ import Link from "next/link";
 const navItems = [
   { title: "Inicio", url: "/dashboard", icon: Home },
   { title: "Biblioteca", url: "/dashboard/library/charts", icon: Library },
+  {
+    title: "Liderazgo & Arquitectura",
+    url: "/dashboard/leadership",
+    icon: Layers,
+  },
   { title: "Seguridad", url: "/dashboard/infinite", icon: BrickWallShield },
   { title: "Proyectos", url: "/dashboard/proyectos", icon: FolderKanban },
   { title: "Información", url: "/dashboard/settings", icon: Settings },
