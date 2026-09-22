@@ -11,7 +11,6 @@ interface Props {
 export function CategoryHub({ activeCategory, onSelectCategory }: Props) {
   return (
     <div className="space-y-4">
-      {/* Selector de Chips / Pestañas Rápidas */}
       <div className="flex flex-wrap items-center gap-2 border-b border-border pb-3">
         {LIBRARY_CATEGORIES.map((cat) => {
           const Icon = cat.icon;

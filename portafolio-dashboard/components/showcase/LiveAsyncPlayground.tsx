@@ -97,9 +97,6 @@ export function LiveAsyncPlayground() {
 
       <CardContent className="p-0">
         <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
-          {/* ========================================================
-              PANEL 1 (IZQUIERDA): VISTA PREVIA Y CONSOLA DE EVENTOS
-             ======================================================== */}
           <div className="flex flex-col items-center justify-between p-8 bg-background/50 min-h-[380px]">
             <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground self-start">
               Vista Previa Interactiva
@@ -116,8 +113,6 @@ export function LiveAsyncPlayground() {
                 onClick={handleSimulatedApi}
               />
             </div>
-
-            {/* Simulación de consola de eventos */}
             <div className="w-full rounded-md border border-border/80 bg-zinc-950/80 p-3 text-xs font-mono text-zinc-300">
               <div className="flex items-center gap-1.5 text-zinc-400 mb-1 border-b border-zinc-800 pb-1">
                 <Terminal className="h-3.5 w-3.5" />
@@ -128,10 +123,6 @@ export function LiveAsyncPlayground() {
               <p className="text-emerald-400">{log}</p>
             </div>
           </div>
-
-          {/* ========================================================
-              PANEL 2 (DERECHA): EDITOR DE PROPS Y GENERADOR JSX
-             ======================================================== */}
           <div className="flex flex-col bg-muted/10 p-6 space-y-5">
             <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
               Propiedades del Componente
@@ -218,8 +209,6 @@ export function LiveAsyncPlayground() {
                   className="w-full accent-primary mt-2"
                 />
               </div>
-
-              {/* Conmutador de simulación de fallo */}
               <div className="col-span-2 flex items-center justify-between rounded-md border border-border/80 bg-background/60 p-2.5">
                 <div>
                   <p className="text-xs font-medium">
@@ -237,8 +226,6 @@ export function LiveAsyncPlayground() {
                 />
               </div>
             </div>
-
-            {/* Código generado reactivamente */}
             <div className="space-y-2 pt-2 border-t border-border">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">

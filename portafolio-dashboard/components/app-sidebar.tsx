@@ -3,7 +3,6 @@
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -13,14 +12,13 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import {
+  BookOpen,
   BrickWallShield,
   FolderKanban,
   Home,
   Layers,
   Library,
-  LogOut,
   Settings,
-  User,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -32,9 +30,10 @@ const navItems = [
     url: "/dashboard/leadership",
     icon: Layers,
   },
-  { title: "Seguridad", url: "/dashboard/infinite", icon: BrickWallShield },
+  { title: "Seguridad", url: "/dashboard/security", icon: BrickWallShield },
   { title: "Proyectos", url: "/dashboard/proyectos", icon: FolderKanban },
-  { title: "Información", url: "/dashboard/settings", icon: Settings },
+  { title: "Configuración", url: "/dashboard/settings", icon: Settings },
+  { title: "Documentación", url: "/dashboard/docs", icon: BookOpen },
 ];
 
 export function AppSidebar() {
@@ -68,20 +67,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-
-      <SidebarFooter>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton className="flex items-center justify-between w-full">
-              <div className="flex items-center gap-2">
-                <User className="h-4 w-4" />
-                <span className="text-sm">dev_user_1</span>
-              </div>
-              <LogOut className="h-4 w-4 text-muted-foreground" />
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarFooter>
     </Sidebar>
   );
 }

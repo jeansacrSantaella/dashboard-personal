@@ -7,14 +7,8 @@ import { LiveAsyncPlayground } from "@/components/showcase/LiveAsyncPlayground";
 import { LiveCryptoPlayground } from "@/components/showcase/LiveCryptoPlayground";
 import { LiveDonutPlayground } from "@/components/showcase/LiveDonutPlayground";
 import { LiveMetricPlayground } from "@/components/showcase/LiveMetricPlayground";
+import LiveMetricSecurity from "@/components/showcase/LiveMetricSecurity";
 import { LiveRadarPlayground } from "@/components/showcase/LiveRadarPlayground";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { useState } from "react";
 
 export default function ComponentLibraryPage() {
@@ -32,13 +26,11 @@ export default function ComponentLibraryPage() {
         </p>
       </div>
 
-      {/* Punto Intermedio Dinámico: Selector de Categorías */}
       <CategoryHub
         activeCategory={activeCategory}
         onSelectCategory={(id) => setActiveCategory(id)}
       />
 
-      {/* Contenido Condicional según la Categoría Seleccionada */}
       <div className="pt-2">
         {activeCategory === "charts" && (
           <div className="space-y-6">
@@ -62,19 +54,7 @@ export default function ComponentLibraryPage() {
 
         {activeCategory === "qa-security" && (
           <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base font-semibold">
-                  Módulo de Seguridad y Calidad (En Construcción)
-                </CardTitle>
-                <CardDescription>
-                  Matriz de pruebas ISTQB y visualización de postura defensiva.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="h-32 flex items-center justify-center text-xs text-muted-foreground border-t">
-                Próximo componente: Test Execution Matrix & API Health Grid.
-              </CardContent>
-            </Card>
+            <LiveMetricSecurity />
           </div>
         )}
       </div>

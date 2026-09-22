@@ -57,6 +57,6 @@ export const LIBRARY_CATEGORIES: CategoryItem[] = [
       "Indicadores de resiliencia, matriz de pruebas de software y auditoría técnica.",
     icon: ShieldAlert,
     technologies: ["ISTQB", "OWASP", "FastAPI"],
-    componentCount: 1,
+    componentCount: 2,
   },
 ];

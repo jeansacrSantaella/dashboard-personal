@@ -58,11 +58,6 @@ export default function DashboardPage() {
             />
           </div>
         </div>
-
-        {/* <div className="grid gap-6 md:grid-cols-2">
-          <CryptoLineChart />
-          <WeatherWidget />
-        </div> */}
       </div>
     </div>
   );
