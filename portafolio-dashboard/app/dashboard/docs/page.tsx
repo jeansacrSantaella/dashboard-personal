@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function DocsPage() {
   return (
-    <div className="space-y-6 max-w-5xl mx-auto py-2">
+    <div className="space-y-6">
       {/* Header */}
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">

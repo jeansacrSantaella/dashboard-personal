@@ -8,8 +8,8 @@ import Providers from "./providers";
 const oxanium = Oxanium({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Mi Aplicación",
-  description: "App con TanStack Query y Next.js",
+  title: "Jsantaella | Portafolio",
+  description: "Proyecto con TanStack Query y Next.js",
 };
 
 export default function RootLayout({

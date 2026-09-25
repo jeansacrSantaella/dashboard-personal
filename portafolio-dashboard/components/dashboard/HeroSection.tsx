@@ -71,8 +71,6 @@ export function HeroSection() {
             OWASP)[cite: 2, 3].
           </p>
         </div>
-
-        {/* 3. Badges de Especialización y Frentes Académicos */}
         <div className="flex flex-wrap gap-2 pt-1">
           {[
             {
@@ -179,7 +177,7 @@ export function HeroSection() {
             <span>Ver Arquitecturas & Estimaciones</span>
           </Link>
           <Link
-            href="/dashboard/library"
+            href="/dashboard/library/charts"
             className="inline-flex items-center gap-2 rounded-lg border border-input bg-background px-4 py-2 text-xs font-semibold text-foreground transition-all hover:bg-muted"
           >
             <Terminal className="h-4 w-4 text-primary" />
